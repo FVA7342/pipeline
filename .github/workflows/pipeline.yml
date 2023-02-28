@@ -1,6 +1,7 @@
 name: Python pipeline
 
 on: push
+
 jobs:
  test:
   runs-on: ubuntu-latest
@@ -11,8 +12,8 @@ jobs:
   needs: [test]
   runs-on: ubuntu-latest
   steps:
-  - uses: actions/checkout@v2
-  - uses: actions/upload-artifact@v2
-    with: 
-    name: hello
-    path: .
+   - uses: actions/checkout@v2
+   - uses: actions/upload-artifact@v2
+     with: 
+      name: hello
+      path: .
